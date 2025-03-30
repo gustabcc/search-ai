@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algoritmos de Busca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="map-container">
+      <img src="mapa.jpg" alt="Mapa do Problema de Busca">
+    </div>
+
+    <div class="content">
+      <h1>Algoritmos de Busca</h1>
+      <label for="start">Ponto de Partida:</label>
+      <input type="text" id="start" placeholder="Ex: Arad">
+      <br>
+      <label for="end">Ponto de Chegada:</label>
+      <input type="text" id="end" placeholder="Ex: Bucharest">
+      <br>
+
+      <h2>1 - Sem Informação (Buscas Cegas)</h2>
+      <button onclick="runBreadthFirstSearch()">1 - Busca em Extensão (BFS)</button>
+      <button onclick="runUniformCostSearch()">2 - Busca de Custo Uniforme (UCS)</button>
+      <button onclick="runDepthFirstSearch()">3 - Busca em Profundidade (DFS)</button>
+      <button onclick="runDepthLimitedSearch()">4 - Busca em Profundidade Limitada (DLS)</button>
+      <button onclick="runIterativeDeepeningSearch()">5 - Busca de Aprofundamento Iterativo (IDDFS)</button>
+
+      <h2>2 - Com Informação (Buscas Heurísticas)</h2>
+      <button onclick="runGreedy()">6 - Busca Gulosa</button>
+      <button onclick="runAStar()">7 - Algoritmo A*</button>
+
+      <h2>Resultado:</h2>
+      <pre id="result"></pre> 
+      <pre id="cost"></pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
